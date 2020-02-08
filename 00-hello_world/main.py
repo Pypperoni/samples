@@ -1,5 +1,4 @@
-def printHelloWorld():
-    print 'Hello world!'
+def hello_world(a, b):
+    print(f'{a} + {b} = {a+b}')
 
-printHelloWorld()
-
+hello_world(1, 1)

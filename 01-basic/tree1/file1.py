@@ -3,19 +3,19 @@ globalvalue = 0
 
 def test_loop():
     num = 0
-    for i in xrange(500):
+    for i in range(500):
         num += i
 
-    print 'Expected sum: 124750'
-    print 'Built-in sum:', sum(xrange(500))
-    print 'Loop sum:', num
+    print('Expected sum: 124750')
+    print('Built-in sum:', sum(range(500)))
+    print('Loop sum:', num)
 
 def test_nested_class():
     class NestedInterableClass:
         def __iter__(self):
             return self
 
-        def next(self):
+        def __next__(self):
             global globalvalue
             globalvalue += 1
             return globalvalue
@@ -27,5 +27,5 @@ def test_nested_class():
         if number == 50:
             break
 
-    print 'Expected sum: 1275'
-    print 'Loop sum:', num
+    print('Expected sum: 1275')
+    print('Loop sum:', num)

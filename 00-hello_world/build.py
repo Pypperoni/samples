@@ -1,5 +1,3 @@
-#!/usr/bin/python -OO
-
 import argparse
 import sys
 sys.path.append('../..')
